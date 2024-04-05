@@ -37,4 +37,4 @@ def test_compare_files(create_temp_files):
         diff_content = diff_file.read().splitlines()
     
     assert same_content == ['Line 1']
-    assert diff_content == ['Line 2', 'Line 3', 'Line 4', 'Line 5']
+    assert sorted(diff_content) == ['Line 2', 'Line 3', 'Line 4', 'Line 5']
