@@ -38,3 +38,8 @@ def compare_files(file1, file2):
     
     write_to_file('same.txt', same_text)
     write_to_file('diff.txt', diff_text)
+    
+if __name__ == "__main__":
+    file1 = "file1.txt"
+    file2 = "file2.txt"
+    compare_files(file1, file2)
