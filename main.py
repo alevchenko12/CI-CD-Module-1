@@ -5,3 +5,27 @@ def read_file(file_name):
 def write_to_file(file_name, lines):
     with open(file_name, 'w') as file:
         file.write('\n'.join(lines))
+        
+def compare_cycle(text1, text2):
+    same_text = []
+    diff_text = []
+    for line1 in text1:
+        found = False
+        for line2 in text2:
+            if line1 == line2:
+                same_text.append(line1)
+                found = True
+                break
+        if not found:
+            diff_text.append(line1)
+            
+    for line2 in text2:
+        found = False
+        for line1 in text1:
+            if line2 == line1:
+                found = True
+                break
+        if not found:
+            diff_text.append(line2)
+            
+    return same_text, diff_text
