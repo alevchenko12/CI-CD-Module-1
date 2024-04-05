@@ -29,3 +29,12 @@ def compare_cycle(text1, text2):
             diff_text.append(line2)
             
     return same_text, diff_text
+
+def compare_files(file1, file2):
+    text1 = file1.read_file(file1)
+    text2 = file2.read_file(file2)
+    
+    same_text, diff_text = compare_cycle(text1, text2) 
+    
+    write_to_file('same.txt', same_text)
+    write_to_file('diff.txt', diff_text)
