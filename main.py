@@ -1,6 +1,6 @@
 def read_file(file_name):
     with open(file_name, 'r') as file:
-        return set(file.read().splitlines())
+        return {line.strip() for line in file}
     
 def write_to_file(file_name, lines):
     with open(file_name, 'w') as file:
