@@ -1,0 +1,6 @@
+Hello World!
+My name is Katia.
+I am 18 yo.
+I am Computer Science student.
+Bye bye
+Have a nice day!
